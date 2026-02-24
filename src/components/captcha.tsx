@@ -28,17 +28,17 @@ export const Captcha = ({ onVerify }: CaptchaProps) => {
     <div className="w-[300px] flex items-center justify-between py-2 px-2 bg-[#f9f9f9] border border-[#d3d3d3] rounded-[3px] shadow-[0_0_4px_rgba(0,0,0,0.08)]">
       <div>
         <div className="flex items-center gap-3">
-          <div
-            onClick={handleClick}
-            className="w-[28px] h-[28px] rounded-[2px] border-2 border-[#444746] bg-white flex items-center justify-center cursor-pointer shrink-0 transition-colors hover:border-[#a0a0a0]"
-            style={{ boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.1)' }}
-          >
-            {isLoading ? (
-              <ClipLoader size={14} color="#4285f4" speedMultiplier={0.8} />
-            ) : isChecked ? (
-              <Check size={18} weight="bold" color="#4285f4" />
-            ) : null}
-          </div>
+          {isLoading ? (
+            <ClipLoader size={26} color="#4285f4" speedMultiplier={0.8} />
+          ) : (
+            <div
+              onClick={handleClick}
+              className="w-[28px] h-[28px] rounded-[2px] border-2 border-[#444746] bg-white flex items-center justify-center cursor-pointer shrink-0 transition-colors hover:border-[#a0a0a0]"
+              style={{ boxShadow: 'inset 0 1px 1px rgba(0,0,0,0.1)' }}
+            >
+              {isChecked && <Check size={18} weight="bold" color="#4285f4" />}
+            </div>
+          )}
 
           <span className="text-[14px] font-medium text-black">
             Não sou um robô
