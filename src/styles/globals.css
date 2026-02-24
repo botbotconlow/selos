@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {  
+  --black: #333333;
+  --primary: #850101;
+  --secondary: #e00202; /* Cor mais escura para hover */
+}
+
+
+body {
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+
+  button{
+    cursor: pointer;
+  }
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
